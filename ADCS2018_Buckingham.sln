@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CAFBE4AD-9F3A-4C17-BC10-8D63F9D1E6E0}"
+	ProjectSection(SolutionItems) = preProject
+		bin-linux\GIT create this folder please.txt = bin-linux\GIT create this folder please.txt
+		bin-cygwin\GIT create this folder please.txt = bin-cygwin\GIT create this folder please.txt
+		README.md = README.md
+		sample_scripts\sp100000.all-vs-all.bash = sample_scripts\sp100000.all-vs-all.bash
+		data\sp100000.faa = data\sp100000.faa
+		data\sp100000.homologs.zip = data\sp100000.homologs.zip
+		sample_scripts\sp100000.xval.bash = sample_scripts\sp100000.xval.bash
+		data\swissprot_domains.zip = data\swissprot_domains.zip
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ADCS2018", "src\ADCS2018.vcxproj", "{92D1E20A-0607-412C-9C1B-847F17F51A66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|x64.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|x86.ActiveCfg = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Debug|x86.Build.0 = Debug|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|x64.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|x86.ActiveCfg = Release|Win32
+		{92D1E20A-0607-412C-9C1B-847F17F51A66}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E8CC9E1-E83C-433B-A42E-7C03A81D4B48}
+	EndGlobalSection
+EndGlobal

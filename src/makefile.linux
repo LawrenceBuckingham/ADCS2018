@@ -1,0 +1,206 @@
+TARGETS= \
+	AAClust \
+	AAClusterFirst \
+	AAClustSig \
+	AAClustSigEncode \
+	DomainKMedoids \
+	GetCdfInverse \
+	GetKmerTheoreticalDistanceDistributions \
+	GetLargestProtosByClass \
+	SplitFastaHomologs \
+	trec_eval_tc_compact
+
+all: $(TARGETS)
+
+clean:
+	for f in $(TARGETS); do \
+		if [ -f $${f} ]; then rm $${f}; fi; \
+	done
+
+rebuild: clean all
+
+FLAGS=	-std=c++14 \
+		-g \
+		-O3 \
+		-I include \
+		-D 'alloca=__builtin_alloca' \
+		-D 'POPCOUNT=__builtin_popcountll' \
+		-D 'USE_OMP=1' \
+		-D 'DO_OMP_TIMER=1' \
+		-D 'DEFAULT_THREADS=8' \
+		-fopenmp \
+		-lgomp \
+		-lpthread \
+		-lrt \
+		-static \
+		-static-libgcc \
+		-static-libstdc++ \
+		-mpopcnt \
+		-o $@
+
+SIG=include
+
+AAClust: AAClust.cpp \
+	$(SIG)/Args.hpp \
+	$(SIG)/FastaSequence.hpp \
+	$(SIG)/SimilarityMatrix.hpp \
+	$(SIG)/KmerCluster.hpp \
+	$(SIG)/KmerClusterPrototype.hpp \
+	$(SIG)/KmerDistanceCache.hpp \
+	$(SIG)/Alphabet.hpp \
+	$(SIG)/Console.hpp \
+	$(SIG)/Delegates.hpp \
+	$(SIG)/FastaSequence.hpp \
+	$(SIG)/PointerList.hpp \
+	$(SIG)/Util.hpp \
+	$(SIG)/OmpTimer.h
+	g++ AAClust.cpp \
+		$(FLAGS)
+	cp $@ ../bin-linux
+
+AAClusterFirst: AAClusterFirst.cpp  \
+	$(SIG)/Args.hpp \
+	$(SIG)/FastaSequence.hpp \
+	$(SIG)/SimilarityMatrix.hpp \
+	$(SIG)/KmerCluster.hpp \
+	$(SIG)/KmerClusterPrototype.hpp \
+	$(SIG)/KmerDistanceCache.hpp \
+	$(SIG)/Alphabet.hpp \
+	$(SIG)/Console.hpp \
+	$(SIG)/Delegates.hpp \
+	$(SIG)/FastaSequence.hpp \
+	$(SIG)/PointerList.hpp \
+	$(SIG)/Util.hpp \
+	$(SIG)/OmpTimer.h
+	g++ AAClusterFirst.cpp \
+		$(FLAGS)
+	cp $@ ../bin-linux
+
+AAClustSig: AAClustSig.cpp  \
+	$(SIG)/Args.hpp \
+	$(SIG)/FastaSequence.hpp \
+	$(SIG)/SimilarityMatrix.hpp \
+	$(SIG)/KmerCluster.hpp \
+	$(SIG)/KmerClusterPrototype.hpp \
+	$(SIG)/KmerDistanceCache.hpp \
+	$(SIG)/Alphabet.hpp \
+	$(SIG)/Console.hpp \
+	$(SIG)/Delegates.hpp \
+	$(SIG)/FastaSequence.hpp \
+	$(SIG)/PointerList.hpp \
+	$(SIG)/Util.hpp \
+	$(SIG)/OmpTimer.h
+	g++ AAClustSig.cpp \
+		$(FLAGS)
+	cp $@ ../bin-linux
+
+AAClustSigEncode: AAClustSigEncode.cpp  \
+	$(SIG)/Args.hpp \
+	$(SIG)/FastaSequence.hpp \
+	$(SIG)/SimilarityMatrix.hpp \
+	$(SIG)/KmerCluster.hpp \
+	$(SIG)/KmerClusterPrototype.hpp \
+	$(SIG)/KmerDistanceCache.hpp \
+	$(SIG)/Alphabet.hpp \
+	$(SIG)/Console.hpp \
+	$(SIG)/Delegates.hpp \
+	$(SIG)/FastaSequence.hpp \
+	$(SIG)/PointerList.hpp \
+	$(SIG)/Util.hpp \
+	$(SIG)/OmpTimer.h
+	g++ AAClustSigEncode.cpp \
+		$(FLAGS)
+	cp $@ ../bin-linux
+
+DomainKMedoids: DomainKMedoids.cpp \
+		$(SIG)/Args.hpp \
+		$(SIG)/Domain.hpp \
+		$(SIG)/String.hpp \
+		$(SIG)/FastaSequence.hpp \
+		$(SIG)/KmerDistanceCache.hpp \
+		$(SIG)/SimilarityMatrix.hpp \
+		$(SIG)/Alphabet.hpp \
+		$(SIG)/HBRandom.hpp
+	g++ DomainKMedoids.cpp $(FLAGS) -O3 -o $@
+	cp $@ ../bin-linux
+
+GetCdfInverse: GetCdfInverse.cpp
+	g++ GetCdfInverse.cpp \
+		-o $@ \
+		-std=c++14 \
+		-I$(SIG) \
+		-I$(SIG)/Lmvq \
+		-Dalloca=__builtin_alloca \
+		-DPOPCOUNT=__builtin_popcountll \
+		-O3 \
+		-fopenmp \
+		-lgomp \
+		-static \
+		-lpthread \
+		-lrt \
+		-static-libgcc \
+		-static-libstdc++ \
+		-mpopcnt
+	cp $@ ../bin-linux
+
+GetKmerTheoreticalDistanceDistributions: GetKmerTheoreticalDistanceDistributions.cpp
+	g++ GetKmerTheoreticalDistanceDistributions.cpp \
+		-std=c++14 \
+		-I$(SIG) \
+		-I$(SIG)/Lmvq \
+		-Dalloca=__builtin_alloca \
+		-DPOPCOUNT=__builtin_popcountll \
+		-O3 \
+		-fopenmp \
+		-lgomp \
+		-static \
+		-lpthread \
+		-lrt \
+		-static-libgcc \
+		-static-libstdc++ \
+		-o $@ \
+		-mpopcnt
+	cp $@ ../bin-linux
+
+GetLargestProtosByClass: GetLargestProtosByClass.cpp \
+		$(SIG)/Args.hpp \
+		$(SIG)/Domain.hpp \
+		$(SIG)/String.hpp \
+		$(SIG)/FastaSequence.hpp \
+		$(SIG)/KmerDistanceCache.hpp \
+		$(SIG)/SimilarityMatrix.hpp \
+		$(SIG)/Alphabet.hpp \
+		$(SIG)/HBRandom.hpp
+	g++ GetLargestProtosByClass.cpp $(FLAGS) -O3 -o $@
+	cp $@ ../bin-linux
+
+SplitFastaHomologs: SplitFastaHomologs.cpp \
+		$(SIG)/Args.hpp \
+		$(SIG)/Domain.hpp \
+		$(SIG)/String.hpp \
+		$(SIG)/FastaSequence.hpp \
+		$(SIG)/KmerDistanceCache.hpp \
+		$(SIG)/SimilarityMatrix.hpp \
+		$(SIG)/Alphabet.hpp \
+		$(SIG)/HBRandom.hpp
+	g++ SplitFastaHomologs.cpp $(FLAGS) -O3 -o $@
+	cp $@ ../bin-linux
+
+trec_eval_tc_compact: trec_eval_tc_compact.cpp
+	g++ trec_eval_tc_compact.cpp \
+		-I include \
+		-o $@ \
+		-std=c++11 \
+		-O3 \
+		-fopenmp \
+		-lgomp \
+		-lpthread \
+		-lrt \
+		-static \
+		-static-libgcc \
+		-static-libstdc++ \
+		-Dalloca=__builtin_alloca \
+		-DPOPCOUNT=__builtin_popcountll \
+		-mpopcnt 
+	cp $@ ../bin-linux
+

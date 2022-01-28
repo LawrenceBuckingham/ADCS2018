@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{56d3eef4-9287-4af3-94cf-c89bdfdb3134}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\AllocatedKmer.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Alphabet.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\AlphabetHelper.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Args.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Array.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Assert.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\BitSet.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CharMap.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Console.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Constants.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CsvIO.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\db.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Delegates.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DiscreteDistribution.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DistanceType.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Distribution.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DnaDistance.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Domain.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\EncodedKmer.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\EnumBase.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Exception.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\FastaSequence.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\FileUtil.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GMM1D.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\HBRandom.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Histogram.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\IArrayParser.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\IntegerDistribution.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\JohnCook.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\KMedoids.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Kmer.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\KmerCluster.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\KmerClusterAL.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\KmerClusterPrototype.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\KmerDistanceCache.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\KmerDistributions.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\KmerIndex.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\kNearestNeighbours.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\LookupTable.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\NormalDistribution.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\OmpTimer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PackedArray.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PointerList.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PrecisionRecallRecord.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Ranking.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Selector.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SequenceDistanceFunction.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SignatureHit.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SignatureMatch.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SimilarityMatrix.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\String.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Substring.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\TestFramework.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\TrecEvalRecord.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Types.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Util.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\WeibullDistribution.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DoubleArrayExtensions.hpp" />
+    <ClInclude Include="Include\Function.hpp" />
+    <ClInclude Include="Include\KmerCodebook.hpp" />
+    <ClInclude Include="Include\Mapping.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AAClust.cpp" />
+    <ClCompile Include="AAClusterFirst.cpp" />
+    <ClCompile Include="AAClustSig.cpp" />
+    <ClCompile Include="AAClustSigEncode.cpp" />
+    <ClCompile Include="GetKmerTheoreticalDistanceDistributions.cpp" />
+    <ClCompile Include="GetCdfInverse.cpp" />
+    <ClCompile Include="GetLargestProtosByClass.cpp" />
+    <ClCompile Include="SplitFastaHomologs.cpp" />
+    <ClCompile Include="trec_eval_tc_compact.cpp" />
+    <ClCompile Include="DomainKMedoids.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile.cygwin" />
+    <None Include="makefile.linux" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="license.txt" />
+  </ItemGroup>
+</Project>

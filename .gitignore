@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ADCS2018_Buckingham
+/.vs/ADCS2018_Buckingham/v15/.suo
+/src/Include/Signature.Common.Cpp.vcxproj.user
+/bin-cygwin
+/bin-linux
+/src/Release
